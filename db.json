@@ -65,17 +65,6 @@
         "controlled"
       ],
       "correctIndex": 1
-    },
-    {
-      "prompt": "Age",
-      "answers": [
-        "23",
-        "29",
-        "51",
-        "54"
-      ],
-      "correctIndex": 0,
-      "id": 7
     }
   ]
 }

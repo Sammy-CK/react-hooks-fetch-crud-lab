@@ -1,10 +1,10 @@
 import React from "react";
 import QuestionItem from "./QuestionItem";
 
-function QuestionList({questions}) {
+function QuestionList({questions, setQuestions}) {
 
 
-  const questionActual = questions.map((question, index) => <QuestionItem key={index} question={question}/>)
+  const questionActual = questions.map((question, index) => <QuestionItem key={index} question={question} setQuestions={setQuestions} questions={questions} />)
 
   return (
     <section>
