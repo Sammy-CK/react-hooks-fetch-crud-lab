@@ -19,7 +19,7 @@ useEffect(() => {
   return (
     <main>
       <AdminNavBar onChangePage={setPage} />
-      {page === "Form" ? <QuestionForm /> : <QuestionList questions={questions} />}
+      {page === "Form" ? <QuestionForm questions={questions} setQuestions={setQuestions} /> : <QuestionList questions={questions} />}
     </main>
   );
 }
