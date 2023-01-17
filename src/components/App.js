@@ -7,19 +7,20 @@ function App() {
   const [page, setPage] = useState("List");
   const [questions, setQuestions] = useState([]);
 
-useEffect(() => {
-  fetch('http://localhost:4000/questions')
-  .then(resp => resp.json())
-  .then(data => setQuestions(data))
-}
-,[])   
-
-
+  useEffect(() => {
+    fetch("http://localhost:4000/questions")
+      .then((resp) => resp.json())
+      .then((data) => setQuestions(data));
+  }, []);
 
   return (
     <main>
       <AdminNavBar onChangePage={setPage} />
-      {page === "Form" ? <QuestionForm questions={questions} setQuestions={setQuestions} /> : <QuestionList questions={questions} setQuestions={setQuestions} />}
+      {page === "Form" ? (
+        <QuestionForm questions={questions} setQuestions={setQuestions} />
+      ) : (
+        <QuestionList questions={questions} setQuestions={setQuestions} />
+      )}
     </main>
   );
 }
